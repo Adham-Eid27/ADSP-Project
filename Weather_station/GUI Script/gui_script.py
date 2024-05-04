@@ -2,7 +2,7 @@ from tkinter import *
 import serial
 import time
 
-serialCom = serial.Serial('COM5', 9600)
+serialCom = serial.Serial('COM8', 9600)
 
 # arduino sleep
 serialCom.setDTR(False)
