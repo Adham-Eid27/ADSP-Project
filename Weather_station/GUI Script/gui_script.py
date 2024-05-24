@@ -66,7 +66,7 @@ def readserial():
         print(index)
         index.clear()
 
-    time.sleep(0.0001)
+    time.sleep(0.001)
 
     Label(window, text="Temperature:", font="30").place(x=100, y=200)
     Label(window, text="Humidity:", font="30").place(x=100, y=230)
@@ -78,5 +78,6 @@ def readserial():
 while True:
     window.update()
     readserial()
+
 
 
