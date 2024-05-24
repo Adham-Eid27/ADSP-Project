@@ -21,19 +21,22 @@ def readserial():
 
     index.append(decoded_bytes)
     if len(index) == 1:  # Temperature
-        Label(window, text=index[0]).place(x=250, y=10)
+        Label(window, text=index[0]).place(x=0, y=0)
     elif len(index) == 2:  # Humidity
-        Label(window, text=index[1]).place(x=250, y=60)
-    elif len(index) == 3:  # Moisture
-        Label(window, text=index[2]).place(x=250, y=110)
-    elif len(index) == 4:  # FAN TOGGLE
-        Label(window, text=index[3]).place(x=500, y=60)
-    elif len(index) == 5:  # PUMP TOGGLE
-        Label(window, text=index[4]).place(x=500, y=110)
+        Label(window, text=index[1]).place(x=0, y=0)
+    elif len(index) == 3:  # LPG
+        Label(window, text=index[2]).place(x=0, y=0)
+    elif len(index) == 4:  # Air quality
+        Label(window, text=index[3]).place(x=500, y=250)
+    elif len(index) == 5:  # RPM
+        Label(window, text=index[4]).place(x=500, y=300)
+    elif len(index) == 6:  # HUmid
+        Label(window, text=index[5]).place(x=500, y=350)
+    elif len(index) == 7:  # Temp
+        Label(window, text=index[6]).place(x=500, y=400)
 
-
-    if len(index) == 5:
-        print("Done")
+    if len(index) == 7:
+        print("")
         index.clear()
 
     time.sleep(0.0001)
@@ -41,7 +44,7 @@ def readserial():
 
 window = Tk()
 window.title("Digital design project")
-window.geometry("700x200")
+window.geometry("1920x1080")
 
 Label(window, text="Temperature:").place(x=150, y=10)
 Label(window, text="Humidity:").place(x=150, y=60)
